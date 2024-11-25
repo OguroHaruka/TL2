@@ -1,5 +1,6 @@
 #pragma once
 #include<string>
+#include "externals/DirectXTex/DirectXTex.h"
 
 class TextureConverter
 {
@@ -26,5 +27,9 @@ private:
 	/// <param name="mString">マルチバイト文字列</param>
 	/// <returns></returns>
 	static std::wstring ConvertMultiByteStringToWideString(const std::string& mString);
+
+	DirectX::TexMetadata metadata_;
+
+	DirectX::ScratchImage scratchImage_;
 };
 
